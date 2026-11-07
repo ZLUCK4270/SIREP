@@ -1,0 +1,14 @@
+{
+  "name": "sirep",
+  "private": true,
+  "workspaces": [
+    "sirep-front",
+    "sirep-back"
+  ],
+  "scripts": {
+    "dev": "bun --cwd sirep-front run dev",
+    "build": "bun --cwd sirep-front run build",
+    "start": "bun --cwd sirep-front run start",
+    "dev:back": "bun --cwd sirep-back run dev"
+  }
+}

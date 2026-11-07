@@ -6,6 +6,7 @@
   "scripts": {
     "prebuild": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
     "build": "nest build",
+    "dev": "nest start --watch",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:prod": "node dist/main",
