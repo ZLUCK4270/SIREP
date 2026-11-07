@@ -2,13 +2,14 @@
   "name": "sirep",
   "private": true,
   "workspaces": [
+    "sirep-front/app",
     "sirep-front",
     "sirep-back"
   ],
   "scripts": {
-    "dev": "bun --cwd sirep-front run dev",
-    "build": "bun --cwd sirep-front run build",
-    "start": "bun --cwd sirep-front run start",
-    "dev:back": "bun --cwd sirep-back run dev"
+    "dev": "cd sirep-front/app && bun run dev",
+    "build": "cd sirep-front/app && bun run build",
+    "start": "cd sirep-front/app && bun run start",
+    "dev:back": "cd sirep-back && bun run dev"
   }
 }

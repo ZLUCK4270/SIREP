@@ -17,7 +17,7 @@ Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location '$ro
 Start-Sleep -Seconds 3
 
 Write-Host "[2/2] Iniciando Frontend en puerto 3001 (Next.js)..." -ForegroundColor Yellow
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location '$rootDir\sirep-front\app'; npm run dev"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location '$rootDir\sirep-front\app'; npm run dev -- -p 3001"
 
 Write-Host ""
 Write-Host "========================================================" -ForegroundColor Green

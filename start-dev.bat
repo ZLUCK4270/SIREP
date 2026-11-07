@@ -19,7 +19,7 @@ start "SIREP - Backend (NestJS :3000)" cmd /k "cd /d "%ROOT_DIR%sirep-back" && n
 timeout /t 3 /nobreak > nul
 
 echo [2/2] Iniciando Frontend en puerto 3001 (Next.js)...
-start "SIREP - Frontend (Next.js :3001)" cmd /k "cd /d "%ROOT_DIR%sirep-front\app" && npm run dev"
+start "SIREP - Frontend (Next.js :3001)" cmd /k "cd /d "%ROOT_DIR%sirep-front\app" && npm run dev -- -p 3001"
 
 echo.
 echo ========================================================

@@ -1,14 +1,11 @@
 {
-  "name": "sirep-front",
+  "name": "sirep-front-wrapper",
   "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "app"
-  ],
   "scripts": {
-    "dev": "bun --cwd app run dev",
-    "build": "bun --cwd app run build",
-    "start": "bun --cwd app run start",
-    "test": "bun --cwd app run test"
+    "dev": "cd app && bun run dev",
+    "build": "cd app && bun run build",
+    "start": "cd app && bun run start",
+    "test": "cd app && bun run test"
   }
 }
