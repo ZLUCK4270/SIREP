@@ -1,0 +1,54 @@
+# compiled output
+/dist
+/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# env
+.env*
+!.env.example
+
+# SIREP: Escaneos reales de clientes (Regla de oro: nunca se suben al repositorio)
+muestras/
+muestras/*
+muestra/
+**/muestra/
+resultados_json/
+**/resultados_json/
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.bundle
+supabase/.temp/
+.temp/

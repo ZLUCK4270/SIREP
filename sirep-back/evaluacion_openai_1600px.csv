@@ -1,0 +1,226 @@
+﻿reporte,campo,valor esperado,valor leído,confianza,resultado,costo,tiempo
+"ABREGU_01",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,1788
+"ABREGU_02",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,565
+"ABREGU_03",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,692
+"ABREGU_04",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,866
+"ABREGU_05",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,841
+"ABREGU_06",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,723
+"ABREGU_07",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,776
+"ABREGU_08",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,754
+"ABREGU_09",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,604
+"ABREGU_10",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,573
+"ABREGU_11",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,575
+"ABREGU_12",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,564
+"ABREGU_13",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,586
+"ABREGU_14",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,593
+"ABREGU_15",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,762
+"ABREGU_16",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,649
+"ABREGU_17",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,755
+"ABREGU_18",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,607
+"ABREGU_19",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,560
+"ABREGU_20",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,855
+"ABREGU_21",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,629
+"ABREGU_22",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,588
+"ABREGU_23",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,610
+"ABREGU_24",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,619
+"ABREGU_25",ERROR_GLOBAL,"","[openai] HTTP 429: {
+    ""error"": {
+        ""message"": ""You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."",
+        ""type"": ""insufficient_quota"",
+        ""param"": null,
+        ""code"": ""credit_balance_exhausted""
+    }
+}
+",baja,error,0,1001

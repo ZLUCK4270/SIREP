@@ -1,0 +1,196 @@
+/**
+ * Responsabilidad: fuente única de verdad de la identidad visual de SIREP.
+ * Existe para que la interfaz pueda mapearse al sistema de diseño de RP-TECH sin
+ * buscar valores sueltos por los componentes.
+ *
+ * Dirección visual: consola técnica clara. Neutros fríos (pizarra), un único
+ * acento índigo para acción y foco, y color semántico solo para estado: ámbar =
+ * pendiente, rojo = ilegible o error, verde = confirmado. Los datos que se copian
+ * o comparan (N°, códigos, horas) van en monoespaciada.
+ *
+ * Los nombres de token (`paper`, `petrol`, `brick`…) se conservaron de la versión
+ * anterior para que ningún componente tuviera que cambiar: `petrol` es ahora el
+ * acento índigo y `paper` es el fondo de la aplicación.
+ *
+ * Modo oscuro: sigue la preferencia del sistema y se puede forzar con
+ * `data-theme="dark"` o `data-theme="light"` en <html>.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Superficies */
+  --paper: #f3f5fa;
+  --paper-raised: #ffffff;
+  --paper-sunken: #e9edf5;
+  --paper-inset: #f6f8fc;
+  --line: #dfe4ee;
+  --line-strong: #c4ccdb;
+
+  /* Texto */
+  --ink: #0b1220;
+  --ink-muted: #445069;
+  --ink-faint: #5f6b82;
+
+  /* Acento índigo: acción primaria, foco y selección */
+  --petrol-50: #eef0ff;
+  --petrol-100: #e0e4ff;
+  --petrol-200: #c4cbff;
+  --petrol-600: #4f46e5;
+  --petrol-700: #4338ca;
+  --petrol-900: #1e1b4b;
+
+  /* Ámbar: confianza media y campo pendiente */
+  --amber-50: #fffaeb;
+  --amber-200: #fcd98a;
+  --amber-600: #b45309;
+  --amber-700: #92400e;
+
+  /* Rojo: confianza baja, ilegible y error */
+  --brick-50: #fef1f1;
+  --brick-200: #fbc5c5;
+  --brick-600: #cf2222;
+  --brick-700: #a51818;
+
+  /* Verde: confirmado y reporte completo */
+  --green-50: #ebfaf3;
+  --green-200: #a9e8cc;
+  --green-600: #047857;
+  --green-700: #065f46;
+
+  /* Visor oscuro del escaneo */
+  --stage: #0b1020;
+  --stage-raised: #121a30;
+  --stage-line: #243050;
+  --stage-ink: #e2e8f4;
+
+  /* Tipografía */
+  --font-ui: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", monospace;
+
+  --fs-micro: 0.6875rem;
+  --fs-meta: 0.78125rem;
+  --fs-body: 0.875rem;
+  --fs-base: 0.9375rem;
+  --fs-title: 1.375rem;
+  --fs-display: clamp(1.625rem, 1.1rem + 1.5vw, 2.125rem);
+  --tracking-label: 0.07em;
+  --tracking-tight: -0.02em;
+
+  /* Radios */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Espaciado estructural */
+  --space-panel: 1.25rem;
+  --space-gutter: clamp(1.25rem, 3vw, 3rem);
+  --layout-max: 1560px;
+  --header-h: 3.75rem;
+
+  /* Elevación */
+  --shadow-sheet:
+    0 24px 48px -24px rgb(11 18 32 / 0.55), 0 0 0 1px rgb(255 255 255 / 0.04) inset;
+  --shadow-lift:
+    0 1px 2px rgb(11 18 32 / 0.05), 0 12px 28px -18px rgb(11 18 32 / 0.28);
+
+  --ease-salida: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Modo oscuro por preferencia del sistema, salvo que se fuerce el claro. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --paper: #090e1a;
+    --paper-raised: #111827;
+    --paper-sunken: #060a13;
+    --paper-inset: #0d1423;
+    --line: #1f2a44;
+    --line-strong: #364563;
+
+    --ink: #e8ecf6;
+    --ink-muted: #aab3c8;
+    --ink-faint: #8995ad;
+
+    --petrol-50: #171b45;
+    --petrol-100: #1f2560;
+    --petrol-200: #2f3a8f;
+    --petrol-600: #8b94ff;
+    --petrol-700: #b0b7ff;
+    --petrol-900: #0e1136;
+
+    --amber-50: #2a1f0a;
+    --amber-200: #5a430f;
+    --amber-600: #fbbf24;
+    --amber-700: #fcd34d;
+
+    --brick-50: #2d1215;
+    --brick-200: #5b1f24;
+    --brick-600: #f87171;
+    --brick-700: #fca5a5;
+
+    --green-50: #0d2a20;
+    --green-200: #145a40;
+    --green-600: #34d399;
+    --green-700: #6ee7b7;
+
+    --stage: #05080f;
+    --stage-raised: #0a1120;
+    --stage-line: #19233c;
+    --stage-ink: #e6ebf6;
+
+    --shadow-sheet:
+      0 24px 48px -24px rgb(0 0 0 / 0.8), 0 0 0 1px rgb(255 255 255 / 0.04) inset;
+    --shadow-lift: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 28px -18px rgb(0 0 0 / 0.8);
+  }
+}
+
+/* Modo oscuro forzado. */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper: #090e1a;
+  --paper-raised: #111827;
+  --paper-sunken: #060a13;
+  --paper-inset: #0d1423;
+  --line: #1f2a44;
+  --line-strong: #364563;
+
+  --ink: #e8ecf6;
+  --ink-muted: #aab3c8;
+  --ink-faint: #8995ad;
+
+  --petrol-50: #171b45;
+  --petrol-100: #1f2560;
+  --petrol-200: #2f3a8f;
+  --petrol-600: #8b94ff;
+  --petrol-700: #b0b7ff;
+  --petrol-900: #0e1136;
+
+  --amber-50: #2a1f0a;
+  --amber-200: #5a430f;
+  --amber-600: #fbbf24;
+  --amber-700: #fcd34d;
+
+  --brick-50: #2d1215;
+  --brick-200: #5b1f24;
+  --brick-600: #f87171;
+  --brick-700: #fca5a5;
+
+  --green-50: #0d2a20;
+  --green-200: #145a40;
+  --green-600: #34d399;
+  --green-700: #6ee7b7;
+
+  --stage: #05080f;
+  --stage-raised: #0a1120;
+  --stage-line: #19233c;
+  --stage-ink: #e6ebf6;
+
+  --shadow-sheet:
+    0 24px 48px -24px rgb(0 0 0 / 0.8), 0 0 0 1px rgb(255 255 255 / 0.04) inset;
+  --shadow-lift: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 28px -18px rgb(0 0 0 / 0.8);
+}

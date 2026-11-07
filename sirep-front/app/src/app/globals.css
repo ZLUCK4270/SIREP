@@ -1,0 +1,242 @@
+/**
+ * Responsabilidad: conectar los tokens con Tailwind y definir los estilos base
+ * de la aplicación (papel, foco, scroll, selección y movimiento reducido).
+ * Existe para que los componentes usen utilidades semánticas (`bg-paper`,
+ * `text-ink`, `border-line`) en lugar de valores literales.
+ */
+
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme inline {
+  --font-sans: var(--font-ui);
+  --font-mono: var(--font-mono);
+
+  --color-paper: var(--paper);
+  --color-raised: var(--paper-raised);
+  --color-sunken: var(--paper-sunken);
+  --color-inset: var(--paper-inset);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --color-ink: var(--ink);
+  --color-muted: var(--ink-muted);
+  --color-faint: var(--ink-faint);
+
+  --color-petrol-50: var(--petrol-50);
+  --color-petrol-100: var(--petrol-100);
+  --color-petrol-200: var(--petrol-200);
+  --color-petrol-600: var(--petrol-600);
+  --color-petrol-700: var(--petrol-700);
+  --color-petrol-900: var(--petrol-900);
+
+  --color-amber-50: var(--amber-50);
+  --color-amber-200: var(--amber-200);
+  --color-amber-600: var(--amber-600);
+  --color-amber-700: var(--amber-700);
+
+  --color-brick-50: var(--brick-50);
+  --color-brick-200: var(--brick-200);
+  --color-brick-600: var(--brick-600);
+  --color-brick-700: var(--brick-700);
+
+  --color-green-50: var(--green-50);
+  --color-green-200: var(--green-200);
+  --color-green-600: var(--green-600);
+  --color-green-700: var(--green-700);
+
+  --color-stage: var(--stage);
+  --color-stage-raised: var(--stage-raised);
+  --color-stage-line: var(--stage-line);
+  --color-stage-ink: var(--stage-ink);
+
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  --text-micro: var(--fs-micro);
+  --text-micro--line-height: 1.35;
+  --text-meta: var(--fs-meta);
+  --text-meta--line-height: 1.4;
+  --text-body: var(--fs-body);
+  --text-body--line-height: 1.5;
+  --text-base: var(--fs-base);
+  --text-base--line-height: 1.5;
+  --text-title: var(--fs-title);
+  --text-title--line-height: 1.25;
+  --text-display: var(--fs-display);
+  --text-display--line-height: 1.05;
+
+  --tracking-label: var(--tracking-label);
+  --tracking-tight: var(--tracking-tight);
+
+  --shadow-sheet: var(--shadow-sheet);
+  --shadow-lift: var(--shadow-lift);
+
+  --ease-salida: var(--ease-salida);
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--paper);
+    /* Resplandor índigo muy tenue arriba: da profundidad sin competir con los datos. */
+    background-image:
+      radial-gradient(1100px 480px at 88% -12%,
+        color-mix(in srgb, var(--petrol-600) 10%, transparent),
+        transparent 65%),
+      radial-gradient(900px 420px at -8% -6%,
+        color-mix(in srgb, var(--petrol-600) 6%, transparent),
+        transparent 60%);
+    background-repeat: no-repeat;
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--petrol-100);
+    color: var(--petrol-900);
+  }
+
+  ::placeholder {
+    color: var(--ink-faint);
+    opacity: 1;
+  }
+
+  /*
+   * El foco se dibuja por fuera para que nunca quede tapado por un borde de la
+   * tabla o del panel; sobre el visor oscuro se invierte el tono.
+   */
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--petrol-600);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  .en-mesa :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline-color: var(--petrol-200);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .salto-contenido {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 100;
+    transform: translateY(-200%);
+    background-color: var(--ink);
+    color: var(--paper);
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    transition: transform 150ms var(--ease-salida);
+  }
+
+  .salto-contenido:focus-visible {
+    transform: translateY(0);
+  }
+
+  /* Scroll fino consistente en el visor del escaneo y en el panel de campos. */
+  .scroll-fino {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  .scroll-fino::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+
+  .scroll-fino::-webkit-scrollbar-thumb {
+    background-color: var(--line-strong);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+/* Animaciones de entrada. El bloque de movimiento reducido de @layer base las
+   desactiva para quien lo pide. */
+@keyframes entrada-arriba {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrada-lado {
+  from {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  .animar-entrada {
+    animation: entrada-arriba 420ms var(--ease-salida) both;
+    animation-delay: calc(var(--retardo, 0) * 1ms);
+  }
+
+  .animar-lado {
+    animation: entrada-lado 420ms var(--ease-salida) both;
+    animation-delay: calc(var(--retardo, 0) * 1ms);
+  }
+
+  /* Tarjetas de la lista: entran en cascada con --i = posición en la página. */
+  .animar-tarjeta {
+    animation: entrada-arriba 360ms var(--ease-salida) both;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+
+  .animar-aparecer {
+    animation: aparecer 300ms var(--ease-salida) both;
+  }
+}

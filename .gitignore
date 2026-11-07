@@ -1,0 +1,36 @@
+# Dependencias y compilados
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.next/
+**/next/
+out/
+coverage/
+
+# Variables de entorno y secretos (NUNCA SUBIR)
+.env*
+**/.env*
+!.env.example
+**!.env.example
+
+# Datos de clientes y escaneos reales (Regla de oro)
+muestras/
+**/muestras/
+muestra/
+**/muestra/
+resultados_json/
+**/resultados_json/
+*.pdf
+*.jpg
+*.jpeg
+*.png
+
+# Logs y temporales
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.temp/
+supabase/.temp/
+
