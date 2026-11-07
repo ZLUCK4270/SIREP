@@ -4,6 +4,11 @@ Write-Host "       🚀 INICIANDO ENTORNO DE DESARROLLO SIREP         " -Foregro
 Write-Host "========================================================" -ForegroundColor Cyan
 Write-Host ""
 
+Write-Host "[0/2] Verificando y liberando puertos 3000 y 3001..." -ForegroundColor Yellow
+Get-NetTCPConnection -LocalPort 3000, 3001 -ErrorAction SilentlyContinue | ForEach-Object {
+    Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue
+}
+
 $rootDir = $PSScriptRoot
 
 Write-Host "[1/2] Iniciando Backend en puerto 3000 (NestJS)..." -ForegroundColor Yellow
@@ -27,3 +32,4 @@ Write-Host " • Health Check:           http://localhost:3000/health" -Foregrou
 Write-Host ""
 Write-Host "Para detener los servicios, simplemente cierra las ventanas de terminal."
 Write-Host "========================================================"
+

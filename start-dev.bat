@@ -7,6 +7,10 @@ echo        🚀 INICIANDO ENTORNO DE DESARROLLO SIREP
 echo ========================================================
 echo.
 
+echo [0/2] Verificando y liberando puertos 3000 y 3001...
+for /f "tokens=5" %%a in ('netstat -aon ^| findstr ":3000 "') do taskkill /f /pid %%a >nul 2>&1
+for /f "tokens=5" %%a in ('netstat -aon ^| findstr ":3001 "') do taskkill /f /pid %%a >nul 2>&1
+
 set "ROOT_DIR=%~dp0"
 
 echo [1/2] Iniciando Backend en puerto 3000 (NestJS)...
@@ -31,3 +35,4 @@ echo.
 echo Para detener los servicios, simplemente cierra las ventanas abiertas.
 echo ========================================================
 pause
+
